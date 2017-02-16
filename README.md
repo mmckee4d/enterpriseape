@@ -1,7 +1,7 @@
 Enterprise Ape
 ============
 
-This is a powerfull ape!
+This is a powerful ape!
 ---------------------
 
 ### Welcome to the repository

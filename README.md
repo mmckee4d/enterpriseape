@@ -21,7 +21,7 @@ Feel free to access [my portfoilo] (http://myportfoilo.mmckee4d.com)
 
 ### Choose us...
 1. Proven Expirence
-2. Cometitive price 
+2. Competitive price 
 3. Exemplary Customer Service
 
 Exammple of code: `puts 'Hello World'`

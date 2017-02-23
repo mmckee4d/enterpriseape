@@ -5,11 +5,11 @@ gem 'rails', '4.1.6'
 
 # Use postgresql as the database for Active Record
 group :production do
-  gem 'pg'
+  gem "pg"
 end
 
-group :developement, :test do
-  gem 'sqlite3'
+group :development, :test do
+  gem "sqlite3"
 end
 
 # Use SCSS for stylesheets

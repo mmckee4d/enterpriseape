@@ -5,9 +5,15 @@ class CompaniesController < ApplicationController
 
   def index
     @companies = Company.all
-    respond_with(@companies)
+    #respond_with(@companies)
+    
+    respond_to do |format|
+      format.html
+      format.csv { render text: @companies.to_csv}
+      format.json { render text: @companies.to_json}
+    end
   end
-
+    
   def show
     respond_with(@company)
   end

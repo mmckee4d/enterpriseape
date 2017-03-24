@@ -1,4 +1,5 @@
 class Company < ActiveRecord::Base
+  
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
       Company.create! row.to_hash
@@ -16,10 +17,10 @@ class Company < ActiveRecord::Base
   
   
   def self.to_json
-    CSV.generate do |jso|
-      csv << column_names
+    JSON.generate do |json|
+      json << column_names
       all.each do |company|
-        csv << company.attributes.values_at(*column_names)
+        json << company.attributes.values_at(*column_names)
       end
     end
   end

@@ -5,49 +5,52 @@
         <h2><%= pluralize(@invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
 
         <ul>
-        <% @invoice.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+          <% @invoice.errors.full_messages.each do |message| %>
+            <li>
+              <%= message %>
+            </li>
+            <% end %>
         </ul>
       </div>
-    <% end %>
+      <% end %>
 
-    <div class="control-group" >
-      <%= f.label :date, class: 'control-label' %><br>
-      <div class="controls" >
-        <%= f.date_select :date %>
-       </div> 
-    </div>
-    <div class="control-group" >
-      <%= f.label :company, class: 'control-label' %><br>
-      <div class="controls" >
-        <%= f.text_field :company %>
-      </div>  
-    </div>
-    <div class="control-group" >
-      <%= f.label :tax, class: 'control-label' %><br>
-      <div class="controls" >
-        <%= f.text_field :tax %>
-      </div>  
-    </div>
-    <div class="control-group" >
-      <%= f.label :salesperson, class: 'control-label' %><br>
-      <div class="controls" >
-        <%= f.text_field :salesperson %>
-      </div>  
-      <div class="control-group">
-      <%= f.label "Status", class: 'control-label' %>
-      <div class="controls">
-        <%= f.select(:status_type, options_for_select([['PAID', 'PAID'], ['PENDING', 'PENDING']]), { include_blank: true }) %>
-      </div>
-    </div>
-     </div>
-     <div class="control-group" >
-       <div= class="controls" >
-          <div class="actions">
-            <%= f.submit 'Submit', class: 'btn btn-default' %>
-          </div>
+        <div class="control-group">
+          <%= f.label :date, class: 'control-label' %><br>
+            <div class="controls">
+              <%= f.date_select :date %>
+            </div>
         </div>
-     </div>
-  <% end %>
+        <div class="control-group">
+          <%= f.label :company, class: 'control-label' %><br>
+            <div class="controls">
+              <%= f.text_field :company %>
+            </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :tax, class: 'control-label' %><br>
+            <div class="controls">
+              <%= f.text_field :tax %>
+            </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :salesperson, class: 'control-label' %><br>
+            <div class="controls">
+              <%= f.text_field :salesperson %>
+            </div>
+        </div>
+        <div class="control-group">
+          <%= f.label "Status", class: 'control-label' %><br>
+            <div class="controls">
+              <%= f.select(:status_type, options_for_select([['PAID', 'PAID'], ['PENDING', 'PENDING']]), { include_blank: true }) %>
+            </div>
+
+        </div>
+        <div class="control-group">
+          <div=c lass="controls">
+            <div class="actions">
+              <%= f.submit 'Submit', class: 'btn btn-default' %>
+            </div>
+        </div>
 </div>
+<% end %>
+  </div>

@@ -8,7 +8,7 @@ class InvoicesController < ApplicationController
     @search = InvoiceSearch.new(params[:search]) 
     @invoices = @search.scope
   end
-
+  
   # GET /invoices/1
   # GET /invoices/1.json
   def show
@@ -71,6 +71,6 @@ class InvoicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def invoice_params
-      params.require(:invoice).permit(:date, :company, :tax, :salesperson, :status_type)
+      params.require(:invoice).permit(:date, :company, :tax, :employee_id , :status_type)
     end
 end
